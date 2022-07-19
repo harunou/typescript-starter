@@ -23,7 +23,6 @@ const config = {
         'prefer-template': 'error',
         'default-case': 'error',
         'default-case-last': 'error',
-        'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
         'eslint-comments/require-description': 'error',
 
         // NOTE(harunou): style rules, that Prettier does not support
