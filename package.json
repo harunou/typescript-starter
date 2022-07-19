@@ -1,8 +1,7 @@
 {
   "name": "typescript-starter",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "license": "MIT",
   "scripts": {
     "test": "run-s -ln lint:all jest:all",
     "jest:base": "jest --watchAll=false",
@@ -21,8 +20,6 @@
     "shell:bash:exists": "if ! command -v bash\n  then\n   echo 'Bash is not found'\n   exit 1 \n  fi",
     "prepare": "run-s git:hooks:install shell:bash:exists"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@babel/core": "7.18.9",
     "@babel/preset-env": "7.18.9",
