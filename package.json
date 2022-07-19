@@ -17,8 +17,8 @@
     "git:hooks:commit": "run-s -ln prettier:format:staged",
     "git:hooks:push": "echo 'push'",
     "prettier:format:staged": "bash ./scripts/prettier/prettify-staged.sh",
-    "shell:bash:exists": "if ! command -v bash\n  then\n   echo 'Bash is not found'\n   exit 1 \n  fi",
-    "prepare": "run-s git:hooks:install shell:bash:exists"
+    "shell:bash:exists": "if ! command -v bash>/dev/null\n  then\n   echo '\nERROR: bash is not found\n'\n   exit 1 \n  fi",
+    "prepare": "run-s git:hooks:install 'shell:bash:exists --silent'"
   },
   "dependencies": {
     "@babel/core": "7.18.9",
