@@ -6,8 +6,9 @@
   "scripts": {
     "test": "jest",
     "git:hooks:install": "husky install",
-    "git:hooks:commit": "echo 'commit'",
+    "git:hooks:commit": "run-s -ln prettier:format:staged",
     "git:hooks:push": "echo 'push'",
+    "prettier:format:staged": "bash ./scripts/prettier/prettify-staged.sh",
     "shell:bash:exists": "if ! command -v bash\n  then\n   echo 'Bash is not found'\n   exit 1 \n  fi",
     "prepare": "run-s git:hooks:install shell:bash:exists"
   },
