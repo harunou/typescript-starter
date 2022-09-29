@@ -18,8 +18,8 @@
     "git:hooks:push": "echo 'push'",
     "prettier:format:staged": "bash ./scripts/prettier/prettify-staged.sh",
     "packages:upgrade": "ncu --interactive --upgrade",
-    "shell:bash:exists": "if ! command -v bash>/dev/null\n  then\n   echo '\nERROR: bash is not found\n'\n   exit 1 \n  fi",
-    "prepare": "run-s git:hooks:install 'shell:bash:exists --silent'"
+    "pathname:bash": "echo 'Bash pathname is'; command -v bash",
+    "prepare": "run-s git:hooks:install 'pathname:bash --silent'"
   },
   "dependencies": {
     "@babel/core": "7.19.3",
