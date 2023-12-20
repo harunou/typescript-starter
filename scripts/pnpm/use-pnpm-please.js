@@ -5,8 +5,8 @@ const fs = require('fs');
 
 main();
 function main() {
-    const BACKGROUND_RED = '\033[41m';
-    const BACKGROUND_RESET = '\033[0m';
+    const BACKGROUND_RED = '\x1b[41m';
+    const BACKGROUND_RESET = '\x1b[0m';
     const WORKFLOW_PATH = '.github/workflows/workflow.yaml';
 
     const workflowPnpmVersion = getWorkflowPnpmVersion(WORKFLOW_PATH);
