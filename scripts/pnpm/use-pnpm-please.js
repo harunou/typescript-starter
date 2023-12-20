@@ -40,7 +40,7 @@ function main() {
 function getWorkflowPnpmVersion(workflowPath) {
     const VERSION_REGEX = /name:\s*Setup pnpm[\s\S]*?version:\s*(\d+\.\d+\.\d+)/;
     try {
-        const workflowFile = fs.readFileSync().toString('utf8');
+        const workflowFile = fs.readFileSync(workflowPath).toString('utf8');
         const match = workflowFile.match(VERSION_REGEX);
         return match ? match[1] : null;
     } catch (e) {
