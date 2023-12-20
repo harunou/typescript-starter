@@ -11,7 +11,7 @@
     "eslint:base": "eslint --format=codeframe --max-warnings=0 --ext=ts,tsx",
     "eslint:all": "npm run eslint:base -- './src'",
     "js-type-check:base": "tsc --skipLibCheck --checkJs --noEmit --resolveJsonModule",
-    "js-type-check:all": "npm run js-type-check:base -- ./*.js ./.*.js, ./scripts/**/*.js",
+    "js-type-check:all": "npm run js-type-check:base -- ./*.js ./scripts/**/*.js",
     "ts-type-check:all": "tsc --project ./tsconfig.json",
     "git:hooks:install": "husky install",
     "git:hooks:commit": "run-s -ln prettier:format:staged",
