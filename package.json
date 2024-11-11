@@ -18,8 +18,7 @@
     "git:hooks:push": "echo 'push'",
     "prettier:format:staged": "node ./scripts/prettier/format-staged.js",
     "packages:upgrade": "ncu --interactive --upgrade",
-    "pathname:bash": "echo 'Bash pathname is'; command -v bash",
-    "prepare": "run-s git:hooks:install 'pathname:bash --silent'"
+    "prepare": "run-s git:hooks:install"
   },
   "dependencies": {
     "@babel/core": "7.23.6",
