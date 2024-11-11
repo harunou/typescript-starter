@@ -18,7 +18,7 @@
     "git:hooks:push": "echo 'push'",
     "prettier:format:staged": "node ./scripts/prettier/format-staged.js",
     "packages:upgrade": "ncu --interactive --upgrade",
-    "prepare": "run-s git:hooks:install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@babel/core": "7.23.6",
@@ -39,7 +39,7 @@
     "eslint-plugin-jest": "27.6.0",
     "eslint-plugin-jest-dom": "5.1.0",
     "eslint-plugin-testing-library": "6.2.0",
-    "husky": "8.0.3",
+    "husky": "9.1.6",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
     "jest-watch-typeahead": "2.2.2",
